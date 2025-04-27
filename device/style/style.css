@@ -159,10 +159,10 @@ svg * {
 
 .header-form {
     display: flex;
-
+    flex-shrink: 0;
     width: 517px;
     height: 40px;
-    margin-right: 27px;
+    margin-right: 37px;
 }
 
 .header-input {
@@ -172,10 +172,10 @@ svg * {
     box-sizing: border-box;
     padding-left: 44px;  
     background-color: transparent;
-    background-image: url("/img/main/svg/icons.svg");
+    background-image: url("/device/img/main/svg/icons.svg");
     background-repeat: no-repeat;
     background-position: 15px 50%;
-    letter-spacing: -1px;  
+    letter-spacing: -0.5px;  
 }
 
 .header-input::placeholder {
@@ -203,50 +203,51 @@ svg * {
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    height: 40px;
+    
     list-style-type: none;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    letter-spacing: 1px;
+    margin-inline: -10px;
+    gap: 10px 20px;
 }
 
 .user-item {
     min-width: 81px;
-    height: 100%;
 }
 
-.user-item.user-item:not(:nth-child(3)) a{
-    padding-left: 25px;
+.user-item .user-link{
+    padding-inline: 25px 10px;
 }
 
 .sign-in {
-    background-image: url("/img/icon/header/avatar.svg");
+    background-image: url("/device/img/icon/header/avatar.svg");
     background-repeat: no-repeat;
     background-position: 0 50%;
 }
 
 .compare-link {
-    background-image: url("/img/icon/header/compare.svg");
+    background-image: url("/device/img/icon/header/compare.svg");
     background-repeat: no-repeat;
     background-position: 0 50%;
 }
 
 .cart-link {
-    background-image: url("/img/icon/header/basket.svg");
+    background-image: url("/device/img/icon/header/basket.svg");
     background-repeat: no-repeat;
     background-position: -0 10px;
-    padding-left: 28px;
 }
 
-.user-item:first-child {
+.user-list .user-item:first-child {
     margin-right: auto;
 }
 
-.user-item:nth-child(2) {
-    margin-right: 23px
-}
+/* .user-item {
+    margin-right: 20px
+} */
 
-.user-item a{
+.user-item .user-link{
     display: block;
     padding-block: 5px;
     height: 100%;
@@ -254,10 +255,6 @@ svg * {
     text-decoration: none;
     font-family: "Rubick", sans-serif;
     color: #000000;
-}
-
-.user-item:not(:nth-child(3)) {
-    padding-right: 10px;
 }
 
 .user-item:nth-child(3) {
@@ -278,6 +275,7 @@ svg * {
     max-height: 21px;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .categories-list {
@@ -286,39 +284,34 @@ svg * {
 
 .navigation-list {
     display: flex;
+    justify-content: space-between;
     text-decoration: none;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-block: 0;
     justify-content: start;
     flex-wrap: wrap;
+    margin-inline: -10px -15px;
+    gap: 10px 27px;
 }
 
-.navigation-list__item:first-child {
+.categories-list {
     position: relative;
 }
 
-.navigation-list__item:first-child::before {
-    content: "";
+.nav-button-list {
     position: absolute;
-    background-color: #000000;
-    filter: opacity(0.3);
-    width: 16px;
-    height: 2.5px;
-    top: 24px;
-    right: 17px;
-}
-
-.navigation-list__item:first-child::after {
-    content: "";
-    position: absolute;
-    background-color: #000000;
-    filter: opacity(0.3);
-    width: 16px;
-    height: 2.5px;
-    top: 24px;
-    right: 17px;
-    rotate: 90deg;
+    top: 0;
+    right: 0;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #000000;
+    background-image: url("/device/img/main/png/plus.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    filter: opacity(0.2);
 }
 
 .navigation-list__item__link {
@@ -329,30 +322,12 @@ svg * {
     color:#000;
     background-color: transparent;
     display: block;
-    letter-spacing: 20%;
+    letter-spacing: 10%;
+    padding: 10px
 }
 
-.navigation-list__item:not(:nth-child(4)) {
-    margin-right: 25px;
-}
-
-/* .navigation-list__item:nth-child(4) {
-    margin-left: auto;
-} */
-
-.navigation-list__item:not(:nth-child(4)) a {
-    padding: 10px;
-}
-
-.navigation-list__item:nth-child(4) a {
-    padding-left: 7px;
-    padding-block: 10px;
-}
-
-.navigation-list__item:first-child {
-    margin-right: 256px;
-    position: relative;
-    left: -10px;
+.categories-list:first-child {
+    margin-right: 239px;
     display: block;
 }
 
@@ -454,8 +429,4 @@ svg * {
     top: 16.4px;
 }
 
-.nav-button-list {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
+
