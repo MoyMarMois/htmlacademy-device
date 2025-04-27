@@ -243,10 +243,6 @@ svg * {
     margin-right: auto;
 }
 
-/* .user-item {
-    margin-right: 20px
-} */
-
 .user-item .user-link{
     display: block;
     padding-block: 5px;
@@ -383,23 +379,32 @@ svg * {
     grid-area: information;
     display: grid;
     grid-template-columns: 307px 1fr;
+    row-gap: 50px;
+    grid-template-rows: 70px ;
+    grid-template-areas: ". ."
+                         "card-main-information card-main-information"
+                         "card-link cards-list"
+                         "details-list .";
 }
 
-.cards--information .section-title,
-.cards--information .card-description {
-    grid-column: 1/-1;
+.cards-main-information {
+    grid-area: card-main-information;
+}
+
+.cards-main-information .section-title {
+    margin-bottom: 29px;
 }
 
 .card-link {
-    grid-column: 1/2;
+    grid-area: card-link;
     justify-content: start;
 }
 
 .cards-list {
-    grid-column: 2/3;
     justify-content: end;
     display: flex;
     list-style-type: none;
+    grid-area: cards-list;
 }
 
 .details-list {
@@ -407,6 +412,7 @@ svg * {
     display: flex;
     gap: 20px;
     grid-column: 1/-1;    
+    grid-area: details-list;
 }
 
 
