@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Rubick";
-    src: url('/fonts/rubick/static/Rubik-Bold.ttf');
+    src: url('/device/fonts/rubick/static/Rubik-Bold.woff2') format("woff2");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: "Rubick";
-    src: url('/fonts/rubick/static/Rubik-Regular.ttf');
+    src: url('/device/fonts/rubick/static/Rubik-Regular.woff2') format("woff2");
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: "Raleway";
-    src: url('/fonts/raleway/static/Raleway-ExtraBold.ttf');
+    src: url('/device/fonts/raleway/static/Raleway-ExtraBold.woff2') format("woff2");
     font-weight: 800;
     font-display: swap;
     font-style: normal;
@@ -175,7 +175,7 @@ svg * {
     background-image: url("/device/img/main/svg/icons.svg");
     background-repeat: no-repeat;
     background-position: 15px 50%;
-    letter-spacing: -0.5px;  
+    letter-spacing: -1px;  
 }
 
 .header-input::placeholder {
@@ -208,7 +208,6 @@ svg * {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
-    letter-spacing: 1px;
     margin-inline: -10px;
     gap: 10px 20px;
 }
@@ -246,7 +245,6 @@ svg * {
 .user-item .user-link{
     display: block;
     padding-block: 5px;
-    height: 100%;
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Rubick", sans-serif;
@@ -260,7 +258,7 @@ svg * {
 .counter-cart {
     font: inherit;
     position: absolute;
-    left: -15px;
+    left: -18px;
     font-size: 14px;
     top: 9px;
     z-index: 1;
@@ -362,6 +360,13 @@ svg * {
 
 .counter-card {
     position: absolute;
+    font-family: "Rubick", sans-serif;
+    font-size: 180px;
+    line-height: 0.17;
+    color: #ffffff;
+    z-index: -1;
+    font-weight: 700;
+    top:
 }
 
 .cards--grid {
@@ -369,6 +374,9 @@ svg * {
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     grid-template-areas: "image information";
+    margin-top: -150px;
+    position: relative;
+    z-index: 1;
 }
 
 .card-image {
@@ -378,13 +386,13 @@ svg * {
 .cards--information {
     grid-area: information;
     display: grid;
-    grid-template-columns: 307px 1fr;
+    grid-template-columns: 220px 1fr;
     row-gap: 50px;
     grid-template-rows: 70px ;
     grid-template-areas: ". ."
                          "card-main-information card-main-information"
                          "card-link cards-list"
-                         "details-list .";
+                         "details-list details-list";
 }
 
 .cards-main-information {
@@ -397,7 +405,6 @@ svg * {
 
 .card-link {
     grid-area: card-link;
-    justify-content: start;
 }
 
 .cards-list {
@@ -405,6 +412,19 @@ svg * {
     display: flex;
     list-style-type: none;
     grid-area: cards-list;
+    column-gap: 20px;
+}
+
+.card-slider-button {
+    background-color: transparent;
+    border: 2px solid #000000;
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+}
+
+.is_current {
+    background-color: #000000;
 }
 
 .details-list {
@@ -415,7 +435,12 @@ svg * {
     grid-area: details-list;
 }
 
+.detail-num {
+    font-family: "Rubick", sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
 
+}
 
 /* Текст */
 
@@ -435,4 +460,33 @@ svg * {
     top: 16.4px;
 }
 
+/* buttons */
+
+.button {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.17;
+    text-decoration: none;
+    color:#000000;
+    text-transform: uppercase;
+    letter-spacing: 10%;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%) scaleY(0.2); 
+
+    width: 100%;
+    height: 100%;
+    background-color: #ffe17f;
+}
 
