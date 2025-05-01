@@ -63,10 +63,12 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    color: #000;
+    color: #000000;
     font-family: "Rubick", sans-serif;
     margin: 0;
     padding: 0;
+
+    min-width: 1440px;
 
 }
 
@@ -167,7 +169,7 @@ svg * {
 
 .header-input {
     flex-grow: 1;
-    border: 2px solid #000;
+    border: 2px solid #000000;
     border-radius: 20px 0 0 20px;
     box-sizing: border-box;
     padding-left: 44px;  
@@ -209,7 +211,7 @@ svg * {
     padding: 0;
     flex-wrap: wrap;
     margin-inline: -10px;
-    gap: 10px 20px;
+    gap: 10px 30px;
 }
 
 .user-item {
@@ -229,13 +231,13 @@ svg * {
 .compare-link {
     background-image: url("/device/img/icon/header/compare.svg");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 5px 50%;
 }
 
 .cart-link {
     background-image: url("/device/img/icon/header/basket.svg");
     background-repeat: no-repeat;
-    background-position: -0 10px;
+    background-position: -5px 10px;
 }
 
 .user-list .user-item:first-child {
@@ -286,7 +288,7 @@ svg * {
     justify-content: start;
     flex-wrap: wrap;
     margin-inline: -10px -15px;
-    gap: 10px 27px;
+    gap: 10px 26px;
 }
 
 .categories-list {
@@ -316,7 +318,7 @@ svg * {
     color:#000;
     background-color: transparent;
     display: block;
-    letter-spacing: 10%;
+    letter-spacing: 20%;
     padding: 10px
 }
 
@@ -346,16 +348,6 @@ svg * {
     margin-inline: auto;
 }
 
-.newsletter {
-    padding: 74px 140px 56px;
-    width: 1440px;
-}
-
-.footer {
-    padding: 62px 140px 61px;
-    width: 1440px;
-}
-
 /* product-cards */
 
 .counter-card {
@@ -366,7 +358,8 @@ svg * {
     color: #ffffff;
     z-index: -1;
     font-weight: 700;
-    top:
+    top: 85px;
+    right: 50px;
 }
 
 .cards--grid {
@@ -377,6 +370,7 @@ svg * {
     margin-top: -150px;
     position: relative;
     z-index: 1;
+    margin-bottom: 70px;
 }
 
 .card-image {
@@ -387,8 +381,9 @@ svg * {
     grid-area: information;
     display: grid;
     grid-template-columns: 220px 1fr;
-    row-gap: 50px;
-    grid-template-rows: 70px ;
+    column-gap: 50px;
+    row-gap: 55px;
+    grid-template-rows: 70px max-content repeat(2, min-content);
     grid-template-areas: ". ."
                          "card-main-information card-main-information"
                          "card-link cards-list"
@@ -403,8 +398,14 @@ svg * {
     margin-bottom: 29px;
 }
 
-.card-link {
+.cards-main-information + .card-link {
     grid-area: card-link;
+    display: flex;
+}
+
+.cards-item {
+    display: flex;
+    align-items: center;
 }
 
 .cards-list {
@@ -413,6 +414,7 @@ svg * {
     list-style-type: none;
     grid-area: cards-list;
     column-gap: 20px;
+  
 }
 
 .card-slider-button {
@@ -421,6 +423,7 @@ svg * {
     min-width: 12px;
     min-height: 12px;
     border-radius: 50%;
+
 }
 
 .is_current {
@@ -433,13 +436,394 @@ svg * {
     gap: 20px;
     grid-column: 1/-1;    
     grid-area: details-list;
+
 }
 
 .detail-num {
     font-family: "Rubick", sans-serif;
     font-size: 36px;
-    line-height: 1.2;
+    line-height: 0.9;
+    margin-bottom: 12px;
+    display: block;
 
+}
+
+.product-detail {
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+/* categories-list-main */
+
+.categories-list-main {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px 40px;
+    margin-bottom: 100px;
+}
+
+.categories-list-main__item {
+    display: grid;
+    row-gap: 33px;
+    min-height: 253px;
+    grid-template-rows: 160px 1fr;
+}
+
+.categories-icon {
+    background-color: #ffe17f;
+    width: 160px;
+    height: 160px;
+}
+
+.categories-list-main__item:first-child .categories-icon {
+    background-image: url("/device/img/main/png/categories/virtual.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.categories-list-main__item:nth-child(2) .categories-icon {
+    background-image: url("/device/img/main/png/categories/selfi-branch.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.categories-list-main__item:nth-child(3) .categories-icon {
+    background-image: url("/device/img/main/png/categories/camera.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.categories-list-main__item:nth-child(4) .categories-icon {
+    background-image: url("/device/img/main/png/categories/fit-watch.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.categories-list-main__item:nth-child(5) .categories-icon {
+    background-image: url("/device/img/main/png/categories/watch.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.categories-list-main__item:nth-child(6) .categories-icon {
+    background-image: url("/device/img/main/png/categories/dron.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.category-title {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.3;
+    letter-spacing: -2%;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* benefits from device */
+
+.benefits {
+    position: relative;
+    display: grid;
+    row-gap: 70px;
+}
+
+.benefis-container {
+    background-color: #f0f0f0;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px 106px;
+    padding-block: 50px;
+    /* margin-top: -100px; */
+}
+
+.benefits--list {
+    display: grid;
+    position: relative;
+    gap: 50px 35px;
+}
+
+.benefits--list::after {
+    content: "";
+    position: absolute;
+    top: -65px;
+    bottom: -65px;
+    width: 7px;
+    right: -7px;
+    background-color: #000000;
+}
+
+.benefits--button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.benefits-description .section-title {
+    margin-left: 10px;
+    margin-bottom: 34px;
+
+} 
+
+.benefits-button {
+    display: grid;
+    grid-template-columns: 1fr 125px;
+}
+
+.benefits-main-icon {
+    background-color: #ffe17f;
+    background-image: url("/device/img/icon/main/benefit-one.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+}
+
+.benefit--link {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+
+    background-color: #f0f0f0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.benefit--subtitle {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000000;
+
+    padding-block: 40px;    
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 20%;
+    display: block;
+}
+
+.benefit-container-btn {
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.benefit--info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1;
+    border: none;
+    background-color: #dcdcdc;
+    translate: -50% -50%;
+}
+
+/* column */
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 96px;
+    padding-top: 47px;
+    margin-bottom: 10px;
+}
+
+.column .section-title {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.column .section-title::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    height: 7px;
+    width: 84px;
+    left: 0;
+    background-color: #000000;
+}
+
+.column-container {
+    display: grid;
+    gap: 30px 50px;
+    grid-template-rows: repeat(5, min-content);
+}
+
+.company-item {
+    position: relative;
+    padding-left: 37px;
+    display: flex;
+}
+
+.companies-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+    margin-bottom: 10px;
+}
+
+.company-item::before {
+    content: ".";
+    color: #ffc700;
+    font-size: 60px;
+    top: -55px;
+    left: -2px;
+    position: absolute;
+}
+
+.company-link {
+    font: inherit;
+    font-weight: 700;
+    line-height: 1.11;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -2%;
+}
+
+.column-container .about-us--information {
+    justify-self: start;
+    padding-inline: 22px;
+}
+
+.column-container .contacts--communicate {
+    justify-self: start;
+    padding-inline: 32px;
+}
+
+.contacts--subtitle {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.column-container p,
+.contacts--phone {
+    color: #444444;
+}
+
+.contacts-time-work {
+    margin-bottom: 10px;
+}
+
+/* newsletter */
+
+.newsletter {
+    background-color: #dcdcdc;
+}
+
+.newsletter-container {
+    padding: 74px 140px 56px;
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 354px 1fr;
+    gap: 144px 252px;
+    padding-top: 64px;
+    align-items: end;
+    margin-inline: auto;
+}
+
+.newsletter-container-inner {
+    grid-column: 1/-1;
+
+    display: flex;
+    gap: 100px 188px;
+    flex-wrap: wrap;
+}
+
+.newsletter--form {
+    display: grid;
+    min-width: 810px;
+    grid-template-columns: 1fr 253px;
+}
+
+.email-field {
+    padding: 11px 10px 14px 16px;
+    color: #444444;
+    box-shadow: inset 0 -3px 0px #c4c4c4;
+    border: none;
+    background-color: transparent;
+}
+
+.form-button {
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0 0 0 3px #c4c4c4;
+
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 20%;
+    text-transform: uppercase;
+}
+
+.newsletter .section-title {
+    margin-left: 6px
+}
+
+.newsletter-benefit {
+    padding-left: 32px;
+
+    background-image: url("/device/img/main/svg/check-mark.svg");
+    background-repeat: no-repeat;
+    background-position: left 50%;
+
+    align-self: center;
+}
+
+/* footer */
+
+.footer {
+    background-color: #444444;
+    
+}
+
+.footer-container {
+    padding: 133px 140px 60px;
+    margin: 0 auto;
+    width: 1440px;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.footer-container::before {
+    content: "";
+    position: absolute;
+    background-image: url("/device/img/icon/footer/logo-footer.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 145px;
+    height: 36px;
+    top: 62px;
+}
+
+.footer-container .contacts--address {
+    max-width: 238px;
+    margin-right: 19px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+.footer-container-links {
+    margin-left: -10px;
+    margin-top: -10px;
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: 52px;    
+}
+
+.footer--navigation .navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 484px;
+    gap: 15px;
+}
+
+.navigation-list__item__link {
+    color: #ffffff;
 }
 
 /* Текст */
@@ -451,6 +835,8 @@ svg * {
     line-height: 1;
     margin: 0;
 }
+
+
 
 /* Icons */
 
@@ -470,11 +856,13 @@ svg * {
     text-decoration: none;
     color:#000000;
     text-transform: uppercase;
-    letter-spacing: 10%;
+    letter-spacing: 20%;
 
     position: relative;
     justify-content: center;
-    align-items: center;
+    
+    z-index: 1;
+    display: inline-flex;
 }
 
 .button::before {
@@ -483,7 +871,7 @@ svg * {
     left: 0;
     top: 50%;
     z-index: -1;
-    transform: translateY(-50%) scaleY(0.2); 
+    transform: translateY(-50%) scaleY(0.35); 
 
     width: 100%;
     height: 100%;
