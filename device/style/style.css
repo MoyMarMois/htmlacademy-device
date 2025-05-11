@@ -1308,13 +1308,10 @@ svg * {
 
 /* pagination */
 
-.pagination {
-    background-color: #ebebeb;
-}
-
 .pagination--list {
     display: flex;
     align-items: center;
+    background-color:#ebebeb;
 }
 
 .pagination--item {
@@ -1329,6 +1326,10 @@ svg * {
     min-height: 40px;
     font-size: 16px;
     line-height: 1.25;
+
+    align-items: center;
+    justify-content: center;
+    filter: opacity(0.3);
 }
 
 .pagination--item:first-child {
@@ -1337,6 +1338,19 @@ svg * {
 
 .pagination--item:last-child {
     margin-left: auto;
+    
+}
+
+.prev-pagination,
+.next-pagination {
+    min-width: 128px;
+    min-height: 70px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 20%;
+    filter: opacity(1);
 }
 
 /* popover */
