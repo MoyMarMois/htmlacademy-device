@@ -137,22 +137,34 @@
 
                         <ul class="categories-list-inner">
                             <li class="categories-list__item">
-                                <a class="categories-list__item__link" href="#">Виртуальная реальность</a>
+                                <a class="categories-list__item__link" href="#">
+                                    Виртуальная реальность
+                                </a>
                             </li>
                             <li class="categories-list__item">
-                                <a class="categories-list__item__link" href="#">Моноподы для cелфи</a>
+                                <a class="categories-list__item__link" href="#">
+                                    Фитнес-браслеты
+                                </a>
                             </li>
                             <li class="categories-list__item">
-                                <a class="categories-list__item__link" href="#">Экшн-камеры</a>
+                                <a class="categories-list__item__link" href="#">
+                                    Квадрокоптеры
+                                </a>
                             </li>
                             <li class="categories-list__item">
-                                <a class="categories-list__item__link" href="#">Фитнес-браслеты</a>
+                                <a class="categories-list__item__link list__item--active" href="/">
+                                    Моноподы для cелфи
+                                </a>
                             </li>
                             <li class="categories-list__item">
-                                <a class="categories-list__item__link" href="#">Умные часы</a>
+                                <a class="categories-list__item__link" href="#">
+                                    Умные часы
+                                </a>
                             </li>
                             <li class="categories-list__item">
-                                <a class="categories-list__item__link" href="#">Квадрокоптеры</a>
+                                <a class="categories-list__item__link" href="#">
+                                    Экшн-камеры
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -211,32 +223,33 @@
                             <legendary class="filters--subtitle">
                                 Стоимость
                             </legendary>
-                            <div class="range">
-                                <div class="range-scale">
-                                    <div class="range-bar" style="left: 0; right: 81px">
-                                        <button class="filters--button button--min-price" type="button">
-                                            <span class="visually-hidden">
-                                                Минимальная цена
-                                            </span>
-                                        </button>
-                                        <button class="filters--button button-max-price" type="button">
-                                            <span class="visually-hidden">
-                                                Максимальная цена
-                                            </span>
-                                        </button>
-                                    </div>
+                            <div class="range-scale">
+                                <div class="range-bar" style="left: 0; right: 81px">
+                                    <button class="filters--button button--min-price" type="button">
+                                        <span class="visually-hidden">
+                                            Минимальная цена
+                                        </span>
+                                    </button>
+                                    <button class="filters--button button-max-price" type="button">
+                                        <span class="visually-hidden">
+                                            Максимальная цена
+                                        </span>
+                                    </button>
                                 </div>
-                                <label class="filters--label" for="min-price">
-                                    от
-                                    <input class="filters--range" type="number" step="5" max="5000" min="0" value="0">
-                                </label>
-                                <label class="filters--label" for="max-price">
-                                    до
-                                    <input class="filters--range" type="number" step="5" max="5000" min="0"
-                                        value="5000">
-                                </label>
-                            </div>
+                                <div class="range-field">
+                                    <label class="filters--label" for="min-price">
+                                        от
+                                        <input class="filters--range" type="number" step="5" max="5000" min="0"
+                                            value="0">
+                                    </label>
+                                    <label class="filters--label" for="max-price">
+                                        до
+                                        <input class="filters--range" type="number" step="5" max="5000" min="0"
+                                            value="5000">
+                                    </label>
+                                </div>
 
+                            </div>
                         </fieldset>
 
                         <fieldset class="filters--field">
@@ -288,7 +301,7 @@
                             <legendary class="filters--subtitle">
                                 Bluetooth
                             </legendary>
-                            <ul class="filters--list">
+                            <ul class="filters--list filters--list--radio">
                                 <li class="filter--list--item">
                                     <label class="control">
                                         <input class="control-input visually-hidden" type="radio" name="Blue"
@@ -350,62 +363,74 @@
                             Список товаров.
                         </h2>
                         <ul class="cards--list">
-                            <li class="cards--item">
-                                <a class="cards--link" href="#">
+                            <li class="cards--item" tabindex="0">
+                                <div class="cards__container">
                                     <img class="cards--image" src="/device/img/main/jpeg/product_1.jpg" width="360"
                                         height="380" alt="Любительская селфи-палка">
-                                </a>
-                                <a class="cards--subtitle--link" href="">
-                                    <h3 class="cards--subtitle">
-                                        Любительская<br>селфи-палка
-                                    </h3>
-                                </a>
+                                    <a class="button cards-button" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <h3 class="cards--subtitle">
+                                    Любительская<br>селфи-палка
+                                </h3>
                                 <p class="cards--price">
                                     500 ₽
                                 </p>
+
                             </li>
-                            <li class="cards--item">
-                                <a class="cards--link" href="#">
+                            <li class="cards--item" tabindex="0">
+                                <div class="cards__container">
                                     <img class="cards--image" src="/device/img/main/jpeg/product_2.jpg" width="360"
                                         height="380" alt="Профессиональная селфи-палка">
-                                </a>
-                                <a class="cards--subtitle--link" href="">
-                                    <h3 class="cards--subtitle">
-                                        Профессиональная<br>селфи-палка
-                                    </h3>
-                                </a>
+                                    <a class="button cards-button" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <h3 class="cards--subtitle">
+                                    Профессиональная<br>селфи-палка
+                                </h3>
                                 <p class="cards--price">
                                     1 500 ₽
                                 </p>
+
                             </li>
-                            <li class="cards--item">
-                                <a class="cards--link" href="#">
+                            <li class="cards--item" tabindex="0">
+                                <div class="cards__container">
                                     <img class="cards--image" src="/device/img/main/jpeg/product_3.jpg" width="360"
                                         height="380" alt="Непотопляемая
                                     селфи-палка">
-                                </a>
-                                <a class="cards--subtitle--link" href="">
-                                    <h3 class="cards--subtitle">
-                                        Непотопляемая<br>селфи-палка
-                                    </h3>
-                                </a>
+                                    <a class="button cards-button" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <h3 class="cards--subtitle">
+                                    Непотопляемая<br>селфи-палка
+                                </h3>
                                 <p class="cards--price">
                                     2 500 ₽
                                 </p>
+
                             </li>
-                            <li class="cards--item">
-                                <a class="cards--link" href="#">
+                            <li class="cards--item" tabindex="0">
+                                <div class="cards__container">
                                     <img class="cards--image" src="/device/img/main/jpeg/product_4.jpg" width="360"
                                         height="380" alt="Селфи-палка «Следуй за мной»">
-                                </a>
-                                <a class="cards--subtitle--link" href="">
-                                    <h3 class="cards--subtitle">
-                                        Селфи-палка «Следуй за мной»
-                                    </h3>
-                                </a>
+                                    <a class="button cards-button" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+
+                                <h3 class="cards--subtitle">
+                                    Селфи-палка «Следуй<br>за мной»
+                                </h3>
                                 <p class="cards--price">
                                     1 500 ₽
                                 </p>
+
                             </li>
                         </ul>
 
