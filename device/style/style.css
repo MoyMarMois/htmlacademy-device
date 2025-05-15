@@ -1019,7 +1019,13 @@ svg * {
     color: #ffc700;
 }
 
-.footer-link:hover::before {
+.footer-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: -8px;
+}
+
+.footer-link:hover::before,
+.footer-link:active::before {
     content: "";
     position: absolute;
     
@@ -1212,6 +1218,22 @@ svg * {
     font: inherit;
     font-size: 15px;
     line-height: 1.1;
+}
+
+.filters--label:hover {
+    filter: opacity(0.6);
+}
+
+.filters--label:focus-within {
+    filter: opacity(1);
+}
+
+.filters--label:active {
+    filter: opacity(0.3);
+}
+
+.filters--label:disabled {
+    filter: opacity(0.1);
 }
 
 .range-field {
